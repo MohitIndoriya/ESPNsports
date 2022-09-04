@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body>div:first-child {
+            background-color: #0398dc;
+        }
+
+        #topNav {
+            display: flex;
+            color: #ffffff;
+            gap: 20px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 8px;
+        }
+
+        #matchData {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 8px;
+        }
+
+        #matchData>div {
+            border: 1px solid lightgray;
+            border-radius: 16px;
+            background-color: #ffffff;
+            /* gap: 10px; */
+            padding: 10px;
+            width: 95%;
+            margin-bottom: 12px;
+        }
+        #box>p:first-child {
+            font-size: 12px;
+            /* font-weight: 600; */
+            color: rgb(87, 85, 85);
+            margin-bottom: 12px;
+        }
+
+        #flag+p {
+            font-size: 10px;
+            margin: 8px 0;
+            color: rgb(58, 57, 57);
+        }
+
+        #flag {
+            display: flex;
+            align-items: center;
+        }
+
+        #flag>img {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+        }
+        #flag>div{
+            font-size: 12px;
+            font-weight: 500;
+            color: rgb(49, 48, 48);
+        }
+        #matchTime {
+            display: flex;
+            gap: 30px;
+            margin-top: 8px;
+        }
+        #matchTime>div{
+            font-size: 12px;
+            font-weight: 600;
+            color: rgb(49, 48, 48)
+        }
+
+       
+
+        #navbar {
+            display: flex;
+            min-height: 48px;
+            background-color: #03a9f4;
+            padding: 0 12px;
+            align-items: center;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        #navbar>div:first-child {
+            width: 20%;
+        }
+
+        #navbar>div>img {
+            width: 138px;
+        }
+
+        #subMenu {
+            display: flex;
+            width: 40%;
+            /* justify-content: space-around; */
+            gap: 20px;
+
+        }
+
+        img+div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #notificationBar {
+            margin-left: 40px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            gap: 28px;
+            align-items: center;
+            width: 40%;
+        }
+
+        #fantacy {
+            display: flex;
+        }
+
+        #fantacy>img {
+            width: 24px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="topNav">
+            <div>Matches(10)</div>
+            <div>Asia Cup(2)</div>
+            <div>NZ-A in IND(1)</div>
+            <div>CPL(4)</div>
+            <div>WCPL(1)</div>
+            <div>Men's Hundred(1)</div>
+            <div>Women's Hundred(1)</div>
+        </div>
+        <div id="matchData">
+            <div id="box">
+                <p><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</p>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div><h4>INDIA</h4></div>
+                </div>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div><h4>PAKISTAN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="box">
+                <p><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</p>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div><h4>INDIA</h4></div>
+                </div>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div><h4>PAKISTAN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="box">
+                <p><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</p>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div><h4>INDIA</h4></div>
+                </div>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div><h4>PAKISTAN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="box">
+                <p><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</p>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div><h4>INDIA</h4></div>
+                </div>
+                <div id="flag">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div><h4>PAKISTAN</h4></div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="navbar">
+        <div>
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo">
+        </div>
+        <div id="subMenu">
+            <div>Live Scores</div>
+            <div>Series</div>
+            <div>Teams</div>
+            <div>News</div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div>Fantacy</div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
