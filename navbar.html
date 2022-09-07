@@ -18,6 +18,9 @@
             background-color: #0398dc;
         }
 
+        #mainNavbar{
+            /* padding: 4px; */
+        }
         #topNav {
             display: flex;
             color: #ffffff;
@@ -26,11 +29,17 @@
             font-family: Arial, Helvetica, sans-serif;
             padding: 8px;
         }
+        #topNav>div:hover{
+            color: #d3d7d9;
+            cursor: pointer;
+            font-weight: 300;
+        }
 
         #matchData {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             padding: 8px;
+            /* margin-left: 4px; */
         }
 
         #matchData>div {
@@ -41,6 +50,11 @@
             padding: 10px;
             width: 95%;
             margin-bottom: 12px;
+        }
+        #matchData>div:hover{
+            transform: scale(1.07);
+            transition: 0.6s ease transform;
+            cursor: pointer;
         }
         #box>p:first-child {
             font-size: 12px;
@@ -106,6 +120,15 @@
             color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar #subMenu>div:hover,#notificationBar>div:hover{
+            color: #dfe4e6;
+            cursor: pointer;
+            transform: scale(1.1);
+            text-decoration: underline;
         }
 
         #navbar>div:first-child {
@@ -140,6 +163,14 @@
             width: 40%;
         }
 
+        #subMenu a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #notificationBar i{
+            font-size: 18px;
+        }
+
         #fantacy {
             display: flex;
         }
@@ -148,12 +179,13 @@
             width: 24px;
             margin-right: 8px;
         }
+        
     </style>
 </head>
 
 <body>
     <!-- topnavbar -->
-    <div>
+    <div id="mainNavbar">
         <div id="topNav">
             <div>Matches(10)</div>
             <div>Asia Cup(2)</div>
@@ -264,7 +296,7 @@
             <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo">
         </div>
         <div id="subMenu">
-            <div>Live Scores</div>
+            <div><a href="scoreboard.html">Live Scores</a></div>
             <div>Series</div>
             <div>Teams</div>
             <div>News</div>
