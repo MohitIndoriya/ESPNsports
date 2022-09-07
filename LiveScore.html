@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live score</title>
+    <style>
+        #option{
+            display: flex;
+            justify-content: space-around;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding:10px;
+            font-family: BentonSans,Arial,Noto Sans,sans-serif;
+            
+
+        }
+        #buttons{
+            display: flex;
+            justify-content:start;
+            gap: 10px;
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+            padding:10px;
+            font-family: BentonSans,Arial,Noto Sans,sans-serif;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgba(var(--color-fill-content-prime),var(--tw-bg-opacity));
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--color-line-default),var(--tw-border-opacity));
+    border-bottom-width: 1px;
+    position: sticky;
+            top: 0px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            z-index: 2000;
+            background-color: white;
+
+    
+
+        }
+        #buttons>button{
+            background-color: white;
+            font-size: var(--font-size-text-xs);
+            
+           
+    line-height: 1.33;
+    --tw-border-opacity: 1;
+    border-color: rgba(var(--color-ui-stroke-default),var(--tw-border-opacity));
+    border-width: 1px;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+        }
+        #buttons>button:hover{
+            background-color: lightblue;
+        }
+        #option{
+         
+        }
+        #parent{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+
+        }
+        #parent>div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            padding: 12px 16px;
+        }
+        #parent>div>div>div>img{
+            width: 30px;
+            height: 30px;
+            margin: 0px 8px 0px 0px;
+        }
+        #parent>div>div>div{
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+           
+            
+        }
+        #parent>div>div>div>h6{
+           
+            font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
+            font-size: 50px;
+            
+        }
+           
+            
+        
+        #parent>div>div{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+        }
+        .event{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 2%;
+            font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
+            
+        }
+        .event>h2{
+            padding: 12px 16px;
+            align-items: centers;
+            font-size: 14px;
+        }
+        .da{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body><div>
+    <div id="option">
+        <div>Live</div>
+        <div>Upcoming</div>
+        <div>Result</div>
+    </div>
+    <div id="buttons"> 
+        <button id="International" onclick="Filter1(id)">
+                 International
+        </button>
+        <button id="20" onclick="Filter(id)">
+                     T20
+        </button>
+        <button id="50" onclick="Filter(id)">
+                    ODI
+        </button>
+        <button id="Test" onclick="Filter(id)">
+                     Test
+        </button>
+        <button id="Domestic" onclick="Filter1(id)">
+            Domestic
+        </button>
+        <button>
+                  Men
+        </button>
+        <button>
+                 Women
+        </button>
+       
+    </div>
+    <div class="event">    <h2>Top Matches</h2>
+    <div id="parent" >
+    
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script>
+    let obj=[
+    {
+        "type": "20",
+        "date": "TODAY, 7:30 PM",
+        "venue": "9th Match, Super Four (N), Dubai (DSC), September 06, 2022, Asia Cup",
+        "TeamA": "India",
+        "TeamB": "Sri Lanka",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313100/313128.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/340000/340047.png",
+        "Result": "Match starts in 1 hr 2 mins",
+        "score1": "",
+        "score2": "",
+        "International":"International"
+    },
+    
+    {
+        "type": "50",
+        "date": "RESULT",
+        "venue": "1st ODI (D/N), Cairns, September 06, 2022, New Zealand tour of Australia",
+        "TeamA": "NZ",
+        "TeamB": "AUS",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/340500/340505.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/340400/340493.png",
+        "Result": "Australia won by 2 wickets (with 30 balls remaining)",
+        "score1": "232/9",
+        "score2": "(45/50 ov, T:233) 233/8",
+        "International":"International"
+    },
+    {
+        "type": "20",
+        "date": "NO RESULT",
+        "venue": " Warm-up, Chester-le-Street, September 06, 2022, India Women tour of England",
+        "TeamA": "IND-W",
+        "TeamB": "Eng-D",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313300/313309.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313100/313114.logo.png",
+        "Result": "No result",
+        "score1": "(19.5/20 ov) 149",
+        "score2": "(2/20 ov, T:150) 15/1",
+        "International":"International"
+    },
+    {
+        "type": "20",
+        "date": "LIVE",
+        "venue": " 2nd T20I, Edinburgh, September 06, 2022, Ireland Women tour of Scotland",
+        "TeamA": "SCO-W",
+        "TeamB": "IRE-W",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313100/313150.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/156800/156800.png",
+        "Result": "Ire Women chose to field.",
+        "score1": "(17.4/20 ov) 114/5",
+        "score2": "",
+        "International":"International"
+    },
+    {
+        "type": "Test",
+        "date": "LIVE",
+        "venue": "Manchester, September 05 - 08, 2022, County Championship Division One",
+        "TeamA": "LANCS",
+        "TeamB": "YORKS",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313271.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313281.logo.png",
+        "Result": " (19 ov) 47/1 Day 2 - Yorkshire trail by 229 runs.",
+        "score1": "276",
+        "score2": "(19 ov) 47/1",
+        "International":"Domestic"
+    },{
+        "type": "20",
+        "date": "RESULT",
+        "venue": "16th match, Rawalpindi, September 07, 2022, National T20 Cup",
+        "TeamA": "SPNJB",
+        "TeamB": "Sindh",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/316300/316368.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/316300/316367.png",
+        "Result": "Sindh won by 6 wickets (with 4 balls remaining)",
+        "score1": "175/6",
+        "score2": "(19.2/20 ov, T:176) 181/4",
+        "International": "Domestic"
+    },
+    {
+        "type": "20",
+        "date": "Today, 7:30 PM",
+        "venue": "8th Match, Gros Islet, September 07, 2022, Caribbean Premier League",
+        "TeamA": "Royals",
+        "TeamB": "Trinbago",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/325900/325974.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313400/313485.logo.png",
+        "Result": "Today, 7:30 PM",
+        "score1": "",
+        "score2": "",
+        "International": "Domestic"
+    },
+    {
+        "type": "",
+        "date": "TOMORROW, 4:30 AM",
+        "venue": "9th Match (N), Gros Islet, September 07, 2022, Caribbean Premier League",
+        "TeamA": "Tallawahs",
+        "TeamB": "Kings",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313400/313483.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/325900/325975.png",
+        "Result": "Tomorrow 4:30 AM",
+        "score1": "",
+        "score2": "",
+        "International": "Domestic"
+    },
+    {
+        "type": "Test",
+        "date": "MATCH DELAYED BY RAIN (INSPECTION AT 2:45PM LOCAL TIME)",
+        "venue": "Cardiff, September 05 - 08, 2022, County Championship Division Two",
+        "TeamA": "WORCS",
+        "TeamB": "GLAM",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313280.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313264.logo.png",
+        "Result": "Day 3 - Glamorgan trail by 282 runs.",
+        "score1": "454/9d",
+        "score2": "(50 ov) 172/5",
+        "International": "Domestic"
+    }
+]
+
+function Display(obj){
+    document.getElementById("parent").innerHTML=""
+    obj.map((el)=>{
+   let box= document.createElement("div")
+   let date=document.createElement("h3")
+   date.setAttribute("class","da")
+   date.innerText=el.date;
+   let venue=document.createElement("p")
+   venue.innerText=el. venue;
+   let s= document.createElement("div")
+   let flag= document.createElement("div")
+  let imageA=document.createElement("img")
+  
+  imageA.src=el.imageA
+  let teamA=document.createElement("h2")
+  teamA=el.TeamA
+  flag.append(imageA,teamA)
+  let score1=document.createElement("h3") 
+  score1=el.score1
+  s.append(flag,score1)
+  let s2= document.createElement("div")
+
+  let flag2= document.createElement("div")
+  let imageB=document.createElement("img")
+  
+  imageB.src=el.imageB
+  let teamB=document.createElement("h3")
+  teamB=el.TeamB
+  flag2.append(imageB,teamB)
+  let score2=document.createElement("h3") 
+  score2=el.score2
+  s2.append(flag2,score2)
+  let result=document.createElement("h4")
+  result.innerText=el.Result
+  box.append(date, venue,s,s2,result)
+  document.getElementById("parent").append(box);
+  
+})
+}
+Display(obj)
+function Filter(id){
+    let arr=obj.filter((el)=>el.type==id)
+    Display(arr)
+}
+function Filter1(id){
+    let arr=obj.filter((el)=>el.International==id)
+    Display(arr)
+}
+</script>
+
+<!-- [
+    {
+        "type": "20",
+        "date": "",
+        "venue": "",
+        "TeamA": "",
+        "TeamB": "",
+        "imageA": "",
+        "imageB": "",
+        "Result": "",
+        "score1": "",
+        "score2": "",
+        "International": ""
+    },
+    {
+        "type": "20",
+        "date": "RESULT",
+        "venue": "16th match, Rawalpindi, September 07, 2022, National T20 Cup",
+        "TeamA": "SPNJB",
+        "TeamB": "Sindh",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/316300/316368.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/316300/316367.png",
+        "Result": "Sindh won by 6 wickets (with 4 balls remaining)",
+        "score1": "175/6",
+        "score2": "(19.2/20 ov, T:176) 181/4",
+        "International": "Domestic"
+    },
+    {
+        "type": "20",
+        "date": "Today, 7:30 PM",
+        "venue": "8th Match, Gros Islet, September 07, 2022, Caribbean Premier League",
+        "TeamA": "Royals",
+        "TeamB": "Trinbago",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/325900/325974.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313400/313485.logo.png",
+        "Result": "Today, 7:30 PM",
+        "score1": "",
+        "score2": "",
+        "International": "Domestic"
+    },
+    {
+        "type": "",
+        "date": "TOMORROW, 4:30 AM",
+        "venue": "9th Match (N), Gros Islet, September 07, 2022, Caribbean Premier League",
+        "TeamA": "Tallawahs",
+        "TeamB": "Kings",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313400/313483.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/325900/325975.png",
+        "Result": "Tomorrow 4:30 AM",
+        "score1": "",
+        "score2": "",
+        "International": "Domestic"
+    },
+    {
+        "type": "Test",
+        "date": "MATCH DELAYED BY RAIN (INSPECTION AT 2:45PM LOCAL TIME)",
+        "venue": "Cardiff, September 05 - 08, 2022, County Championship Division Two",
+        "TeamA": "WORCS",
+        "TeamB": "GLAM",
+        "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313280.logo.png",
+        "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313200/313264.logo.png",
+        "Result": "Day 3 - Glamorgan trail by 282 runs.",
+        "score1": "454/9d",
+        "score2": "(50 ov) 172/5",
+        "International": "Domestic"
+    }
+] -->
