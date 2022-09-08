@@ -15,18 +15,24 @@
             gap: 8px;
            align-items: center;
            margin: 4%;
+           font-size: 10px;
+           font-weight: lighter;
         }
         .t2 p{
              margin: -2px;
+             font-size: 14px;
+             font-weight: lighter;
         }
 
         #option {
             display: flex;
             justify-content: space-around;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-            padding: 10px;
+            
             font-family: BentonSans, Arial, Noto Sans, sans-serif;
             border-radius: 8px;
+            height: 40px;
+            align-items: center;
 
 
         }
@@ -59,14 +65,14 @@
 
         #buttons>button {
             background-color: white;
-            font-size: var(--font-size-text-xs);
-
+            font-size: 12px;
+padding: 8px;
 
             line-height: 1.33;
             --tw-border-opacity: 1;
             border-color: rgba(var(--color-ui-stroke-default), var(--tw-border-opacity));
-            border-width: 1px;
-            border-radius: 1.5rem;
+            border-width: 0.5px;
+            border-radius: 15px;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
         }
@@ -79,25 +85,28 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-
-
+            
+            
         }
 
         #parent>div {
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             padding: 12px 16px;
+            height: 150px;
+            font-size: small;
+            border-radius: 8px;
         }
 
         #parent>div>div>div>img {
-            width: 30px;
-            height: 30px;
+            width: 18px;
+            height: 18px;
             margin: 0px 8px 0px 0px;
         }
 
         #parent>div>div>div {
             display: flex;
-            gap: 10px;
-            font-size: 20px;
+            gap: 3px;
+            font-size: 14px;
             font-weight: bolder;
 
 
@@ -120,7 +129,7 @@
 
         .event {
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-            border-radius: 2%;
+            border-radius: 8px;
             font-family: BentonSans-Bold, Arial, Noto Sans, sans-serif;
 
         }
@@ -133,11 +142,15 @@
 
         .da {
             font-weight: bolder;
+            font-size: 12px;
+            margin-bottom: -5px;
         }
 
         #main {
             display: flex;
-            gap: 10px;
+            
+            width: 100%;
+            justify-content: space-around;
         }
 
         #side {
@@ -151,9 +164,9 @@
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             border-radius: 8px 8px 0px 0px;
             font-family: BentonSans-Bold, Arial, Noto Sans, sans-serif;
-        font-size: small;
+        font-size: 10px;
         padding: 0.5px 10px ;
-
+        font-weight: lighter;
         }
         #images{
             width: 100%;
@@ -170,9 +183,23 @@
         }
         #Live{
             display: grid;
-            border-bottom: 1px solid blue;
+            border-bottom: 3px solid blue;
             width: 25%;
             justify-content: center;
+            height: 100%;
+            align-items: center;
+        }
+        .res{
+            font-size: 14px;
+            font-weight: lighter;
+            margin-bottom: 5px;
+        }
+        .report{
+            border-top: 1px solid rgba(27, 31, 35, 0.15);
+            padding-top: 5px;
+        }
+        .venue{
+            font-size: 10px;
         }
 
        
@@ -186,8 +213,8 @@
     <div id="main">
         <div>
             <div id="option">
-                <div id="Live" ><p style="margin: 0px;"> Live</p> </div>
-                <div>Upcoming</div>
+                <div id="Live" ><p style="margin: -1px;"> Live</p> </div>
+                <div style="width: 25git ;">Upcoming</div>
                 <div>Result</div>
             </div>
             <div id="buttons">
@@ -244,7 +271,7 @@
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAB7CAMAAABXYM5RAAAAYFBMVEX///8AAAD39/dXV1cTExOfn5/AwMDs7OwiIiK9vb3T09OKiop7e3tLS0umpqY1NTVQUFDg4OA9PT2Xl5doaGjGxsatra1xcXFiYmKDg4PNzc0ICAgYGBja2tocHBwtLS19F+zEAAACwElEQVRoge2a65KjIBCFBWOIGuNdYxLH93/L1UZjo7kUvVibnXD+THEm9ic2ICCOs1SasIJjgxfMTZWfHFnWKkbODuUq0HPxG2MswU7SGx2m1r3BhILopd7GS12G3zNkCLaMAMYeGdlgeLoMdNtPGPjZfDcDGeYYfFIJEcS9zFMw2tngYPhzWTLyufwQUJ1vzJyypl0hLgeDAKlmURnfOKGXq0DSLRCM1ZgBCWNdMkoWk1kRGNFsuGBkyNgNRqxegAeCAIycq2XcIMDAwxMYl+VtnuaQUHbn/8N41qAGABH+rg+mOzVGsYhgpJ8foSKNP9Z+eLo7FNIIwxsT/xPyzRl90+APGO0y52vGdcmI1JxjBosfMMAIUdlpeqPAxmm6v0nlouqYMbSnFYPndeUoqmpPHRr8OhSKUdaNYgCj8uPxua8YJuTJTsghUdWmDPkQj9sy+A46vGVYhmVYxv/LqEhz31qHcaEQmDJ/esvIiYyDBoM6xT7r5KOgVUPoMJw2IEgJ8RFt1zIswzJ+PyM4RwSddBjUvY3VevAFw3sd6qk6DUZFZEQaDB7TGIFOzh3/pK9qva79123XMizDMn4/Q+ShvppAhyF+aOPuXoNxoiFY9mEMQfyk4+vkPA2PBCnfUj+i7VqGZVjGFzBKnyC9fZ+INu6mGgzqGsfVYFDXajr7iS2Rkevko4xigjDiQ9quZViGZVjG9zDgm1Z5Z8ChyeD9ZVo6D0HbOwOWZsn7y3S0H2JexZ0hj9pEF2FMqXxbDx8lR8b0Ge12MKXx3dsiBvw1L3j3Tgzyov89YmY4/Gia0I2bDjOjr4oHWTmcXQMqmv3U3zBjPL1nuAmPc7X72S15jGn/6gKC6jk1g0J4kNWLC7QlZJ7nybbsi+y6MycZESeAut/zTspmf7gJYjHcbnDINlbP5g2qis4gIGvkwdU/A6hDurOOqyIAAAAASUVORK5CYII="
                                 alt="icon">
                         <div>
-                            <p style="font-weight: bold;">Desktop Scoreboard
+                            <p >Desktop Scoreboard
                             </p>
                             <p> A mini scoreboard that stays with you and updates all the current matches</p>
                         </div>
@@ -255,7 +282,7 @@
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijQDodvwAh_nIT9wXwD3svZxWNvST0MxCXA&usqp=CAU"
                                 alt="icon">
                         <div>
-                            <p style="font-weight: bold;">Archive
+                            <p >Archive
                             </p>
                             <p> </p>
                         </div>
@@ -266,7 +293,7 @@
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAACWlpY+Pj74+PjExMRERET8/Pzb29uampru7u5ycnJMTEzp6elISEjg4OD09PSOjo5aWlp8fHzKysqrq6uFhYU4ODgnJycODg6xsbG3t7fBwcHQ0NAxMTFVVVVmZmaioqIeHh5sbGyAgIAVFRWKJYkGAAADq0lEQVR4nO3di1LiQBAFUAeQyFMUFJ8IiP//i7LrUvJIMrd2Ounc1D1f0LdSMpmennh1JSIiIiIiIiIiIiIiIiIiIiIiIiIiIiJyZPL6OBqNOu8z70IqshiHf7a7oXcxFZhMw7GOdz3mrsOZac+7JFtv5wFDWLYq4u1lwBD6mXdZhpZ5CdsU8SE3YAhj78LMFAQMYe1dmZGL39Ffn9612RgVJwxz7+JMPJUkDDvv6gzMygKGcOddX7rcxfAI/wtcLGHYeFeYahJLGB68S0yUPUcjvnjXmKgbTRhevWtMcxdPGN68i0xyAyQM795VJum3PuI7kjDceJeZYg5FvPUuM0FvBUWceNeZYBhfE/e+mCNOoIhPzH3U6NvpT0TmBhy0KoYlc3cKi9hnfooLKOIH81PM6XznuPcuMwUWce1dZooXKOLIu8wURe3vU9Q9xg0U8dG7zBQDKCJ1jxHZ8pP3GB+hiNQ9Rmy7SN2AKzur+UXdgFtDEakbcPdQxIV3mQmycTxfIG/AQS1G6oi9/AGNc8w9xgw4zwgVNuCy25dBp1IDbOWvKOKwg3U467CqogG38U51Ymk/j/rhnenMyrh108N+x+tkPAGHvVHVy7Q7tfFOk8twuzj0zlLAbs0AF6na2fXfvJMUsur2Y513D1abRaxN5MGqwYjtTD18GCVs3mp/0DdKiO1oPHSNErb/GTb379Dqxa3jHaSQ1UlGc9dDs86id5BCVgEbu+TbHbdF7g64MexkYOfQdTM9pWniHt/21Bs8UqiT+XBG05b9tXXA/d8iNCtZlwoC7n9RG9TzrmrQrTHnFl3eSb4M2sdYbZocYIdrXeJvaEBrEvPgN7YiEQeEXpyeiW8nfEJPkPgMHxv7Ig64gwISD5pgKz3xPBTWRSCeacNmhInnEjdQQOL761iPhHg++BUKSDzjjd2ZIb6KUPIpniPE10mwK93EV4Kw+4dr7zL/HxaQ+Goedg/Y6rDeAXaXm/hjijMo4Iq3KZNBU+tb3ieIbQi3xE0ZaCFkbspgjUPmL5tACwVzQGjPS9yU2ZvGAxI3Zf74iga89i4xTXxynLgp81f0q4LETZkfsYTETZmD8nfSgXd5BkpfSqk/nnBQ1sVvw0d2S19LibtOJwo/ldySj10X94GJmzLn8jcXY95JmQu5S+LUuypTOePjXeKeRZ6L31Pqz7LlGp4O0LThTebC0f8KmjP3ZMq0/f89iYiIiIiIiIiIiIiIiIiIiIiIiIiIiMiZb0oLMh2Rx65KAAAAAElFTkSuQmCC"
                                 alt="icon">
                         <div>
-                            <p style="font-weight: bold;">International Calendar
+                            <p >International Calendar
 
                             </p>
                             <p> </p>
@@ -409,8 +436,10 @@
             let box = document.createElement("div")
             let date = document.createElement("h3")
             date.setAttribute("class", "da")
+            date.style.color=el.date=="LIVE"||el.date=="RESULT"?"red":"black",
             date.innerText = el.date;
             let venue = document.createElement("p")
+            venue.setAttribute("class","venue")
             venue.innerText = el.venue;
             let s = document.createElement("div")
             let flag = document.createElement("div")
@@ -436,8 +465,12 @@
             score2 = el.score2
             s2.append(flag2, score2)
             let result = document.createElement("h4")
+            result.setAttribute("class","res")
             result.innerText = el.Result
-            box.append(date, venue, s, s2, result)
+            let report=document.createElement("div")
+            report.innerText="Series Home"
+            report.setAttribute("class","report")
+            box.append(date, venue, s, s2, result,report)
             document.getElementById("parent").append(box);
 
         })
