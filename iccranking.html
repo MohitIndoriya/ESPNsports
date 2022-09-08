@@ -113,7 +113,7 @@
             margin-bottom: 12px;
             font-family: Tahoma, Geneva, Arial, "Arial Narrow", Verdana, sans-serif;
         }
-        #col1Data p,thead{
+        #col1Data h6,thead{
             background-color: #eeeeee;
             font-size: 12px;
         }
@@ -226,6 +226,16 @@
             /* width: 50%; */
             
         }
+
+        #notificationBar button{
+            border: none;
+            background-color: #03a9f4;
+            color: #ffffff;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -249,14 +259,11 @@
                 <div>Fantacy</div>
             </div>
             <div>Edition IN</div>
-            <div><i class="fa-solid fa-moon"></i></div>
+            <div><button onclick="myFunction()"><i class="fa-solid fa-moon"></i></button></div>
             <div><i class="fa-solid fa-bell"></i></div>
             <div><i class="fa-solid fa-language"></i></div>
             <div><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
-    </div>
-    <div id="rankHeading">
-
     </div>
     <div id="mainPage">
         <div id="col1">
@@ -264,7 +271,7 @@
                 <h1>ICC rankings for Tests, ODIs</h1>
                 <h3>ICC Test Rankings</h3>
                 <table id="table1">
-                    <p><strong> 28 July 2022</strong></p>
+                    <h6><strong> 28 July 2022</strong><h6>
                     <thead>
                         <tr>
                             <th class="table1Col1">Pos</th>
@@ -351,7 +358,7 @@
                 
                 <h3>ICC ODI Rankings</h3>
                 <table id="table1">
-                    <p><strong> 03 September 2022</strong></p>
+                    <h6><strong> 03 September 2022</strong></h6>
                     <thead>
                         <tr>
                             <th class="table1Col1">Pos</th>
@@ -483,3 +490,9 @@
 </body>
 </html>
 <script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
