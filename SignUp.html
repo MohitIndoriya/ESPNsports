@@ -41,71 +41,6 @@
       </div>
     </div>
 
-    <!-- <div id="main">
-         <div>
-            <h1>SignUp</h1>
-            <h3>Please Enter Your Details</h3>
-            <div class="space">
-                <div>ESPNWNDWNS</div>
-            </div>
-            <div>
-                <input id="gape" type="email" placeholder="Email Address">
-            </div>
-            <div>
-                <input id="gape" type="password" placeholder="Password">
-            </div>
-            <div id="check">
-                <input id="checkBox" type="checkbox">
-               <div>
-                   I have read all Terms  & Conditions and Privacy Policy for WonderWins</span> 
-               </div> 
-            </div>
-            <div>
-                <button type="submit"><div><b>Sign Up</b> </div></button>
-            </div>
-            <div>
-                <p>Already have an account?<a href="Login.html">Login Now</a></p>
-            </div>
-         </div>
-
-
-         <div class="box">
-            <h1>INDIA'S COOLEST FANTACY PLATFORM</h1>
-         </div>
-    </div> -->
-
-    <!-- <div id="main">
-        <img src="" alt=""> 
-        <img src="img/Stadium_demo.jpg" alt="image">
-        <div class="data">
-            <h1>Sign up</h1>
-            <h3>Please Enter Your Details</h3>
-
-            <div class="gape">
-                <div id="space" > ESPNWNDWNS</div>
-            </div>
-            <div class="gape">
-                <input id="space" type="email" placeholder="Email">
-            </div>
-            <div class="gape">
-                <input id="space" type="password" placeholder="Password">
-            </div>
-            <div class="gape">
-                <input id="checkBox" type="checkbox">
-               <label for="checkBox">I have read all Terms</label> 
-            </div>
-            <div class="gape">
-                <input id="signUp" type="text" placeholder="">
-            </div>
-            <div class="already">
-                <h3>Already have an account?<a href="Login.html">Login Now</a></h3>
-            </div>
-        </div>
-
-        <div class="data2">
-           
-        </div>
-    </div> -->
     <div id="main">
       <div id="box1">
         <div>
@@ -120,20 +55,24 @@
         </div>
         <div>
           <input type="email" id="email" placeholder="Email" />
+          <p id="emailreq"></p>
         </div>
         <div>
           <input type="password" id="password" placeholder="Password" />
+          <p id="passreq"></p>
         </div>
         <p>
-          <input type="checkbox" />
-          <label for="checkBox"
-            >I have read all Terms & Conditions and Privacy Policy for
-            WonderWins</label
-          >
+          <input type="checkbox" id="checkBox" />
+          <span>
+            I have read all Terms & Conditions and Privacy Policy for WonderWins
+          </span>
         </p>
+        <!-- <div>
+          <button type="button" onclick="signup()">Sign Up</button>
+        </div> -->
         <div>
-          <button type="button" onclick="signup()">
-            <a href="Login.html"><p>Sign Up</p></a>
+          <button type="button">
+            <a href="Login.html" id="pageload"><p>Sign Up</p></a>
           </button>
         </div>
         <div>
@@ -178,21 +117,39 @@
 </html>
 
 <script>
+  var arr = JSON.parse(localStorage.getItem("key")) || [];
+  document.getElementById("pageload").addEventListener("click", signup);
   function signup() {
+    window.location.href = "./Login.html";
     event.preventDefault();
-    // console.log("hii");
     var email = document.getElementById("email").value;
     var pass = document.getElementById("password").value;
 
     var user = {
-        email:email,
-        password:pass,
+      email: email,
+      password: pass,
     };
+    arr.push(user);
+    if (email === "") {
+      document.getElementById("emailreq").innerText = "This field is require";
+    }
+    if (password === "") {
+      document.getElementById("passreq").innerText = "This field is require";
+    }
+    if (password.lenght < 8) {
+      document.getElementById("passreq").innerText =
+        "Password should have minimum 8 characters";
+    }
 
-    var json = JSON.stringify(user);
-    localStorage.setItem(email, json);
-    console.log(" added ddd")
-    // localStorage.setItem("password1", password);
+    var json = JSON.stringify(arr);
+    localStorage.setItem("key", json);
+    console.log(arr);
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
   }
 </script>
 
+<script
+  src="https://kit.fontawesome.com/eb1486e731.js"
+  crossorigin="anonymous"
+></script>

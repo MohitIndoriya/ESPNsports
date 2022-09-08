@@ -106,32 +106,26 @@
   </body>
 </html>
 <script>
+  var arr = JSON.parse(localStorage.getItem("key"));
   function login() {
     event.preventDefault();
-    // console.log("hello");
 
     var email = document.getElementById("email").value;
+    console.log(email);
     var password = document.getElementById("password").value;
-    var result = document.getElementById("result");
-
-    var user = localStorage.getItem(email);
-    // var password1 = localStorage.getItem("password1").value;
-    var data = JSON.parse(user);
-    console.log("Sucess")
-
-    // if (email === email1 && password === password1) {
-    //   alert("Login Sucessfully");
-    // } else {
-    //   alert("email and password is incorrect");
-    // }
-    if(user == null){
-        result.innerHTML = "Wrong User";
+    var flag = false;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].email === email && arr[i].password === password) {
+        flag = true;
+        break;
+      }
     }
-    else if(email == data.email && password == data.password){
-        result.innerHTML = " logged in";
+    if (flag) {
+      alert("Logged in");
+    } else {
+      alert("Wrong credential");
     }
-    else{
-        result.innerHTML="Wrong Password";
-    }
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
   }
 </script>

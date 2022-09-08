@@ -63,23 +63,15 @@ img+div {
     margin-bottom: -30px;
     width: 55%;    
 }
-#check{
-    background-color: green;
-}
-#box1 > div a{
-    background-color: green;
-}
-#box1 > div > a button{
-    background-color: green;
-}
 #emailBtn{
-    width: 250%;
-    height: 45px;
+    width:465px;
+    height: 50px;
     margin-top: 20px;
     text-align: center;
     border: 2px solid red;
-    border-radius: 5px;   margin-left: 0px;
-    background-color: #03A9F4;  
+    padding-left: 0px;
+    margin-left: 0px;
+    border-radius: 5px;  
 }
 #emailBtn:hover{
     background-color: red;
@@ -92,7 +84,7 @@ img+div {
     font-weight: bold;
 }
 #numberBtn{
-    width: 85%;
+    width: 465px;
     height: 50px;
     margin-top: 20px;
     border: none;
