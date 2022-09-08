@@ -72,7 +72,7 @@
         </div> -->
         <div>
           <button type="button">
-            <a href="Login.html" id="pageload"><p>Sign Up</p></a>
+             <p id="pageload">Sign Up</p></a>
           </button>
         </div>
         <div>
@@ -120,7 +120,7 @@
   var arr = JSON.parse(localStorage.getItem("key")) || [];
   document.getElementById("pageload").addEventListener("click", signup);
   function signup() {
-    window.location.href = "./Login.html";
+    // window.location.href = "./LoginwithNumber.html";
     event.preventDefault();
     var email = document.getElementById("email").value;
     var pass = document.getElementById("password").value;
@@ -133,12 +133,15 @@
     if (email === "") {
       document.getElementById("emailreq").innerText = "This field is require";
     }
-    if (password === "") {
+    if (pass === "") {
       document.getElementById("passreq").innerText = "This field is require";
     }
-    if (password.lenght < 8) {
+    if (pass.lenght < 8) {
       document.getElementById("passreq").innerText =
         "Password should have minimum 8 characters";
+    }
+    if(email !== "" && pass !== ""){
+      window.location.href = "./LoginwithNumber.html";
     }
 
     var json = JSON.stringify(arr);
