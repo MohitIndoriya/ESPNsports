@@ -54,10 +54,6 @@
             flex-direction: row;
         }
 
-        .flex>img {
-            width: 250px;
-            height: 130px;
-        }
 
         img {
             border-radius: 8px;
@@ -82,9 +78,12 @@
         }
 
         .threerowflex {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
+            display: grid;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
         }
 
 
@@ -94,16 +93,6 @@
 
         .thirdcolumn img+p {
             margin-top: 04px;
-        }
-
-        #box>div>.flex img,
-        #box>div>.threerowflex img {
-            /* width: 90%; */
-
-            padding-left: 10px;
-            padding-right: 10px;
-            border-radius: 16px;
-            margin: auto;
         }
 
         p {
@@ -130,7 +119,7 @@
             display: flex;
             flex-direction: row;
             margin: auto;
-            /* border: 2px solid blue; */
+
         }
 
         .keys~div p,
@@ -149,21 +138,12 @@
             cursor: pointer;
         }
 
-        /* .scoresgrid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        } */
-
         .scoresgrid div:hover,
         .scoresgrid .keys p:hover,
         .scoresgrid :hover {
             color: #88CCDD;
             background-color: white;
         }
-
-        /* #box>div>img{
-            width:auto;
-        } */
 
 
         p+a {
@@ -172,7 +152,6 @@
 
         .material-symbols-outlined {
             color: #0eadf4;
-            ;
         }
 
         .box,
@@ -184,7 +163,6 @@
         .first_column {
             border: 1px solid white;
             width: 250px;
-
         }
 
         .box {
@@ -248,64 +226,126 @@
             padding-left: 20px;
         }
 
-        /* *{
-        font-family: BentonSans-Medium,Arial,Noto Sans,sans-serif;
-        /* font-size: small; */
-
-
         #keyspadding {
             font-size: small;
-            /* line-height: 1.5; */
         }
 
         body {
             background-color: rgb(249 249 251);
             padding-left: 40px;
             padding-right: 40px;
-
-
-            /* font-family: BentonSans,Arial,Noto Sans,sans-serif */
         }
 
-        /* .secondcolumn img+p{
-        font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
-       } */
-
-        /* .secondcolumn{
-    font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
-} */
 
         .thirdcolumn img+p {
             font-family: BentonSans-Medium, Arial, Noto Sans, sans-serif;
             color: #767677;
         }
-/* 
-        .secondcolumn {
-            width: 680px;
-        } */
 
         img {
             box-sizing: border-box;
-        }
-
-        .thirdcolumn img {
-            border-radius: 16px;
-            padding-bottom: 0px;
-            padding-top: 5px;
         }
 
         .thirdcolumn img+p {
             padding-bottom: 10px;
         }
 
-        .secondcolumn{
-            /* margin-left: 20px; */
+        .secondcolumn {
+            width: 1600px;
+        }
+
+        .secondcolumn img {
+            width: 100%;
+        }
+
+
+        .flex>img {
+            width: 200px;
+            height: 120px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .backgroundwhite {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .threerowflex img {
+            width: 200px;
+            height: 120px;
+            /* margin-left: 10px; */
+        }
+
+
+
+        .viratimage:first-child {
             border: 2px solid red;
         }
 
-        .secondcolumn img{
-            width: 100%;
+        .flex h3 {
+            margin-top: 0px;
         }
+
+        .threerowflex p {
+            margin-left: -10px;
+            margin-right: 10px;
+        }
+
+        #score {
+            margin-top: -8px;
+        }
+
+        h2+p {
+            margin-top: -10px;
+        }
+
+        #score {
+            display: flex;
+            padding-right: 16px;
+        }
+
+        #score {
+            justify-content: space-between;
+            margin-top: -24px;
+        }
+
+        .scoresgrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .scoresgrid div {
+            margin-left: 0px;
+        }
+
+
+        .secondcolumn img {
+            border-radius: 16px;
+        }
+
+        #ask_image {
+            margin-top: 10px;
+        }
+
+        .backgroundblack img {
+            border-radius: 16px 16px 0px 0px;
+        }
+
+        .backgroundwhite img {
+            margin-top: 10px;
+        }
+
+        .thirdcolumn img {
+            margin: 5px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        body {
+            font-family: BentonSans, Arial, Noto Sans, sans-serif;
+        }
+
     </style>
 </head>
 
@@ -465,10 +505,12 @@
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/esci/media/motion/2022/0903/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global.jpg"
                         alt="image2" />
                     <h1>Should Rishabh Pant replace KL Rahul as opener for India?</h1>
-                    <h4>What should be Pakistan's bowling combination? Mickey Arthur and Wasim Jaffer have their say before the match
+                    <h4>What should be Pakistan's bowling combination? Mickey Arthur and Wasim Jaffer have their say
+                        before the match
                     </h4>
                 </div>
                 <br />
+                <hr />
                 <!-- 2nd cloumns 2nd row -->
                 <div class="flex">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/343700/343724.6.jpg"
@@ -529,11 +571,11 @@
                 <br />
                 <hr />
                 <!-- 2nd coulmns of flex thrid row -->
-                <div class="threerowflex">
+                <div class="threerowflex" class="viratimage">
                     <div>
                         <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_240/esci/media/motion/2022/0904/dm_220904_Asiacup_timeout_virat/dm_220904_Asiacup_timeout_virat.jpg"
                             alt="virat image" />
-                        <p>Uthappa: Kohli looked ominous from the first boundary he hit</p>
+                        <p>Uthappa:Kohli looked ominous from the first boundary he hit</p>
                     </div>
                     <div>
                         <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_240/esci/media/motion/2022/0904/dm_220904_asiacup_timeout_formkohli/dm_220904_asiacup_timeout_formkohli.jpg"
@@ -547,9 +589,12 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="backgroundwhite">
                 <h3>INDIA A VS NEW ZEALAND A</h3>
-                <p>FOUR-DAY GAME, BENGALURU</p>
+                <div id="score">
+                    <p>FOUR-DAY GAME, BENGALURU</p>
+                    <p>IND-235/4</p>
+                </div>
                 <hr />
                 <img class="prasidhimage"
                     src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/318200/318254.6.jpg"
@@ -566,6 +611,7 @@
                         </p>
                     </div>
                 </div>
+                <br />
                 <hr />
                 <div class="scoresgrid">
                     <div class="keys">
@@ -617,7 +663,7 @@
 
             <div>
                 <!-- news with photo column -->
-                <div>
+                <div id="thirdcolumnimage">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_320/lsci/db/PICTURES/CMS/279000/279069.6.jpg"
                         alt="southafricaplayerphoto" />
                     <p>On This Day: Happy birthday, Zulu</p>

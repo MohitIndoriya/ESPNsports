@@ -44,8 +44,9 @@
         .linkflex {
             display: flex;
             gap: 30px;
-
+            text-align: center;
         }
+
 
         .linkflex .material-symbols-outlined {
             margin: px;
@@ -67,11 +68,13 @@
 
 
         .leftsidenews {
-            border: 2px solid blue;
+            /* border: 2px solid blue; */
+            border: 1px solid lightgrey;
             width: 300px;
             margin-left: 30px;
             cursor: pointer;
             border-radius: 16px;
+            background-color: white;
         }
 
         h5 {
@@ -81,11 +84,12 @@
         }
 
         .detailnews {
-            border: 2px solid green;
+            border: 1px solid lightgrey;
             padding-left: 30px;
             padding-right: 30px;
             width: 900px;
             border-radius: 16px;
+            background-color: white;
         }
 
         .detailnews img {
@@ -109,6 +113,7 @@
 
         .backgroundblack {
             border-radius: 16px;
+                
 
         }
 
@@ -122,18 +127,52 @@
 
         h5 {
             line-height: 18px;
-            color: #757575;
+            color: rgb(100 101 102)
         }
 
        h5>br{   
          background-color: red;
         }
+
+
+        *{
+            font-family: BentonSans,Arial,Noto Sans,sans-serif
+        }
+
+        h1,h3{
+            font-family: BentonSans-Bold,Arial,Noto Sans,sans-serif;
+        }
+
+      body{
+        color:#2B2C2D;
+        font-family: BentonSans,Arial,Noto Sans,sans-serif;
+        background-color:#f9f9fb;
+      }
+
+      .linkflex h4{
+        justify-content: center;
+        color: rgb(228 246 254);
+      }
+
+     .backgroundblack p{
+        padding-left: 12px;
+     }
+
+     .backgroundblue{
+        padding-right: 24px;
+        justify-content: center;
+     }
+     /* p{
+        font-family: none;
+        color: red;
+     } */
+    
     </style>
 </head>
 
 <body>
     <!-- first line of page background blue part -->
-    <div class="backgroundblue">
+    <div class="backgroundblue" id="textcenter">
         <div class="link">
             <div class="linkflex">
                 <a href="landing_page.html"><img src="https://wassets.hscicdn.com/static/images/logo.png"
