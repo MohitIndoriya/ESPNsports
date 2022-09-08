@@ -40,8 +40,7 @@
         margin-left: -5px;
         height: 65px;
         box-sizing: border-box;
-
-    }
+     }
 
     input,
     select,
@@ -181,45 +180,48 @@
         margin-right: 20px;
     }
 
-    input,select{
+    input,
+    select {
         outline: none;
     }
 
-    #justify{
+    #justify {
         font-family: BentonSansMedium;
     }
 
-  *{
-    font-family: Lato,Helvetica Neue,Arial,Helvetica,sans-serif;
-  }
+    * {
+        font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+    }
 
-.markarrowlast{
-    color:lightslategray;
-    background-color: transparent;
-    font-family: BentonSans;
-}
+    .markarrowlast {
+        color: lightslategray;
+        background-color: transparent;
+        font-family: BentonSans;
+    }
 
-.searchtrying{
-    border:1px solid lightgray;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    
-}
-.searchtrying>div{
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .searchtrying {
+        border: 1px solid lightgray;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
-h3{
-    color: rgb(100 101 102);
-}
+    }
 
-h4{
-   color:#bde8fc; 
-}
+    .searchtrying>div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
+    h3 {
+        color: rgb(100 101 102);
+    }
 
+    h4{
+        color: #bde8fc;
+    }
 
-    
+    #logo{
+        margin-top: -4px;
+    }
+
 </style>
 
 <body>
@@ -239,10 +241,10 @@ h4{
             </div>
             <div class="linkflex">
                 <h4>Edition IN</h4>
-                <h4><span class="material-symbols-outlined">
+                <h4><span id="logo"class="material-symbols-outlined">
                         apps
                     </span></h4>
-                <h4><span class="material-symbols-outlined">
+                <h4><span id="logo" class="material-symbols-outlined">
                         search
                     </span></h4>
             </div>
@@ -258,10 +260,10 @@ h4{
                 <option>TEST</option>
 
             </select>
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" onclick="fun()">
                 search
             </span>
-            <input type="text" placeholder="Search for Test/ODI/T20 stats" />
+            <input type="text" placeholder="Search for Test/ODI/T20 stats" id="question" />
             <span id="mice" class="material-symbols-outlined">
                 keyboard_voice
             </span>
@@ -335,3 +337,13 @@ h4{
 </body>
 
 </html>
+
+<script>
+
+    function fun(){
+        var q=document.getElementById("question").value;
+        document.getElementById("question").value="";
+        alert("Virat Kholi");
+    }
+
+</script>

@@ -346,6 +346,103 @@
             font-family: BentonSans, Arial, Noto Sans, sans-serif;
         }
 
+        img:hover {
+        
+            box-sizing: border-box;
+            transform: scaleY(1.03);
+            transition: 0.3s;
+        }
+
+        @media screen and (min-width:0px) and (max-width:600px) {
+            .box {
+                display: none;
+            }
+
+            .thirdcolumn {
+                display: none;
+            }
+
+            .secondcolumn>div {
+                /* width:100%; */
+                padding-left: 0px;
+                padding-right: 0px;
+                margin: 0px;
+            }
+
+
+
+            .threerowflex {
+                /* width: 100%; */
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            img {
+                display: block;
+               
+            }
+
+            .flex {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                /* margin-left: 16px; */
+                padding-left: 16px;
+                box-sizing: border-box;
+                display: block;
+            }
+
+            .threerowflex img,
+            .flex>img {
+                width: 100%;
+                height: 100%;
+                margin-left: 0px;
+                padding-left: 0px;
+            }
+        }
+
+        .flex h3, .secondcolumn h1{
+            font-size: 22px;
+        }
+
+        .scoresgrid, .secondcolumn h4{
+            font-size:14px;
+            font-weight: lighter;
+            color: rgb(87, 87, 90);
+        }
+
+        .box{
+            color: rgb(138, 138, 143);
+        }
+        .thirdcolumn p ,a, .keyspadding>p strong{
+            color: darkgray;
+        }
+
+      .scoresgrid, .threerowflex,.flex p, #keyspadding>p strong{
+            color: rgb(69 70 71);
+        }
+
+     .flex h3,.backgroundwhite h1{
+            color: #2b2c2d;
+        }
+
+       .flex, .threerowflex{
+            margin-top: 20px;
+        }
+
+        .backgroundblack h4{
+            color: white;
+        }
+
+        .flex{
+            /* border: 2px solid red; */
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        
+
+
     </style>
 </head>
 
@@ -369,7 +466,7 @@
             </div>
             <!-- key series -->
             <div id="keyspadding">
-                <P>Key Series</P>
+                <P><strong>Key Series</strong> </P>
                 <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
@@ -418,7 +515,7 @@
             </div>
             <!-- quick link -->
             <div id="keyspadding">
-                <p>Quick Links </p>
+                <p><strong>Quick Links</strong></p>
                 <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
@@ -443,8 +540,8 @@
             </div>
             <!-- social media link -->
             <div id="keyspadding">
-                <p>Follow ESPNcricinfo </p>
-                <hr />
+                <p><strong>Follow ESPNcricinfo</strong></p>
+                <hr/>
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
                     <a href="https://www.instagram.com/espncricinfo/">
@@ -472,7 +569,8 @@
             </div>
             <!-- espn sites -->
             <div id="keyspadding">
-                <p>ESPN Sites</p>
+                <p><strong>
+                    ESPN Sites</p></strong>
                 <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
@@ -503,14 +601,14 @@
             <div>
                 <div class="backgroundwhite">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/esci/media/motion/2022/0903/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global.jpg"
-                        alt="image2" />
+                        alt="image2"/>
                     <h1>Should Rishabh Pant replace KL Rahul as opener for India?</h1>
                     <h4>What should be Pakistan's bowling combination? Mickey Arthur and Wasim Jaffer have their say
                         before the match
                     </h4>
                 </div>
-                <br />
-                <hr />
+                <br/>
+                <hr/>
                 <!-- 2nd cloumns 2nd row -->
                 <div class="flex">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/343700/343724.6.jpg"
@@ -555,7 +653,8 @@
                         only
                         88 in their last 10 overs</h4>
                 </div>
-                <br />
+                <br/>
+                <hr/>
                 <!-- 2nd cloumns 2nd row -->
                 <div class="flex">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345400/345403.6.jpg"
@@ -593,7 +692,7 @@
                 <h3>INDIA A VS NEW ZEALAND A</h3>
                 <div id="score">
                     <p>FOUR-DAY GAME, BENGALURU</p>
-                    <p>IND-235/4</p>
+                    <p><strong><span>IND-235/4</strong></p>
                 </div>
                 <hr />
                 <img class="prasidhimage"
@@ -601,18 +700,19 @@
                     alt="Prasidh Krishna">
                 <h2>Thakur replaces injured Prasidh Krishna in India A squad</h2>
                 <p>Back injury sidelines Karnataka quick from rest of the red-ball series against NZ A</p>
+                <br/>
                 <hr />
                 <div class="flex">
-                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345300/345355.6.jpg"
+                    <img #id="rajat" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345300/345355.6.jpg"
                         alt="rajat" />
                     <div>
                         <h3>Rajat Patidar 176, Joe Carter 197 the highlights of drawn game</h3>
                         <p>Other performers included Easwaran with 132, Varma with 121 and Mukesh Kumar with 5 for 86
                         </p>
                     </div>
+                    <br/>
                 </div>
-                <br />
-                <hr />
+               <hr/>
                 <div class="scoresgrid">
                     <div class="keys">
                         <span class="material-symbols-outlined">chevron_right</span>
@@ -637,7 +737,7 @@
         <div class="thirdcolumn">
             <!-- news headline -->
             <div id="keyspadding">
-                <p>News Headlines</p>
+                <p><strong>News Headlines</strong></p>
                 <hr />
                 <div class="news">
                     <span class="material-symbols-outlined">chevron_right</span>
