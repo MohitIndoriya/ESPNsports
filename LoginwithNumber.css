@@ -56,7 +56,9 @@ img+div {
 #box1 > div h1{
     text-align: center;
     margin-top: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 #box1 > div > h3{
     width: 80%;
@@ -65,7 +67,8 @@ img+div {
     margin-top: 15px;
     margin-bottom: 25px;
     color: #8A8EB3;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
 }
 #box1 > div input{
     width: 87%;
@@ -83,11 +86,11 @@ img+div {
     height: 53px;
     width: 43%;
     margin-left: 20px;
-    border: 2px solid red;
+    border: 2px solid  #ff4333;
     border-radius: 5px;
 }
 #btn1 > a{
-    color: red;
+    color:  #ff4333;
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
@@ -99,14 +102,15 @@ img+div {
     margin-left: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(93, 7, 172);
+    background-color: #5217b0;
 }
 #btn2 > a{
     color: white;
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 
 #box2{
@@ -135,13 +139,15 @@ img+div {
 #text > h1{
     color: white;
     font-size: 38px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 #text > h2{
     color: yellow;
     font-size: 38px;
     margin-left: -280px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 #box2 > div h3{
     color: yellow;

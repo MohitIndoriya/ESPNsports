@@ -47,11 +47,6 @@ img+div {
     margin-right: 8px;
 }
 /* Navbar End  */
-#emailreq{
-    margin: 10px;
-    margin-left: 20px;
-    color: red;
-}
 
 #box1{
     width: 40%;
@@ -61,8 +56,10 @@ img+div {
     color: #2B2C2D;
     font-family:Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size:35px;
-    padding: 40px;
+    padding: 25px;
+    font-size: 30px;
+    margin: 10px 0px 15px;
+    font-weight: 700;
 }
 #box1 > div > h3 {
     color: #8A8EB3;
@@ -70,7 +67,7 @@ img+div {
     line-height: 27px;
     font-family: 'Sarabun', sans-serif;
     font-weight: lighter;
-    margin-top: -15px;
+    margin-top: -25px;
     text-align: center;
 }
 #box1 > div div{
@@ -109,14 +106,8 @@ button{
     border: none;
     border-radius: 5px;
     background-color: rgb(97, 95, 95);
-    /* background-color: #B9B9B9; */
-    /* background-color: #6c757d; */
-    /* background-color: #343a40;; */
 }
-button > a{
-    text-decoration: none;
-}
-button > a p{
+button > p{
     color: white;
     font-size: 18px;
     text-align:center;
@@ -135,10 +126,11 @@ button:hover{
 }
 #checkBox{
     margin-left: 15px;
+    margin-top: -10px ;
 }
 #box1 > p span{
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-top: 12px;
+    margin-left: 12px;
     display:inline-block;
     width: 80%;
     text-align: left;
@@ -161,6 +153,16 @@ button:hover{
     font-family: 'Sarabun', sans-serif;
 }
 #box1 > div > h4 a{
+    color: red;
+}
+#emailreq{
+    margin: 10px;
+    margin-left: 20px;
+    color: red;
+}
+#passreq{
+    margin: 10px;
+    margin-left: 20px;
     color: red;
 }
 
