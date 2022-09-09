@@ -8,44 +8,38 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://th.bing.com/th/id/OIP.wagYxnoxUAFgvyWfNi1wLAAAAA?pid=ImgDet&rs=1"
-      <!-- href="https://st.depositphotos.com/2229436/2389/v/950/depositphotos_23893079-stock-illustration-blue-round-blank-matted-color.jpg" -->
-    />
+      href="https://th.bing.com/th/id/OIP.wagYxnoxUAFgvyWfNi1wLAAAAA?pid=ImgDet&rs=1"/>
     <link rel="stylesheet" href="Login.css" />
   </head>
   <body>
-    <!-- Navbar Start -->
+
+    <!-- navbar -->
     <div id="navbar">
-      <div>
-        <img
-          src="https://wassets.hscicdn.com/static/images/logo.png"
-          alt="espnLogo"
-        />
-      </div>
-      <div id="subMenu">
-        <div>Live Scores</div>
-        <div>Series</div>
-        <div>Teams</div>
-        <div>News</div>
-        <div>Features</div>
-        <div>Videos</div>
-        <div>Stats</div>
-      </div>
-      <div id="notificationBar">
-        <div id="fantacy">
-          <img
-            src="https://wassets.hscicdn.com/static/images/fantasy-home.png"
-            alt="fantacyLogo"
-          />
-          <div>Fantacy</div>
+        <div><a href="index.html">
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
         </div>
-        <div>Edition IN</div>
-        <div><i class="fa-solid fa-moon"></i></div>
-        <div><i class="fa-solid fa-bell"></i></div>
-        <div><i class="fa-solid fa-language"></i></div>
-        <div><i class="fa-solid fa-magnifying-glass"></i></div>
-      </div>
+        <div id="subMenu">
+            <div><a href="LiveScore.html">Live Scores</a></div>
+            <div>Series</div>
+            <div><a href="Teams.html">Teams</a></div>
+            <div>News</div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div><a href="Login.html">Fantacy</a></div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
     </div>
+
     <!-- Navbar End -->
 
     <div id="main">
@@ -107,3 +101,43 @@
     </div>
   </body>
 </html>
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+     function asia(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility= "hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility= "hidden"
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function match(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function cpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="hidden" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+
+    }
+    function wcpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+    }
+</script>

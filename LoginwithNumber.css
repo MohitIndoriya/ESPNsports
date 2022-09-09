@@ -1,43 +1,76 @@
 #navbar {
     display: flex;
     min-height: 48px;
-    background-color: #03A9F4;
+    background-color: #03a9f4;
     padding: 0 12px;
     align-items: center;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    position: sticky;
+    top: 0;
 }
+
+#navbar #subMenu>div:hover,#notificationBar>div:hover{
+    color: #dfe4e6;
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
 #navbar>div:first-child {
     width: 20%;
 }
-#navbar>div>img {
+
+#navbar>div>a img {
     width: 138px;
 }
+
 #subMenu {
     display: flex;
     width: 40%;
+    /* justify-content: space-around; */
     gap: 20px;
+
 }
+
 img+div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #notificationBar {
     margin-left: 40px;
     display: flex;
+    /* justify-content: space-between; */
     justify-content: flex-end;
     gap: 28px;
     align-items: center;
     width: 40%;
 }
+
+#subMenu a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#notificationBar i{
+    font-size: 18px;
+}
+
 #fantacy {
     display: flex;
+    
 }
+
 #fantacy>img {
     width: 24px;
     margin-right: 8px;
+}
+#fantacy>div a:first-child {
+    color: #ffffff;
+    text-decoration: none;
+
 }
 /* Navbar End  */
 
@@ -56,7 +89,9 @@ img+div {
 #box1 > div h1{
     text-align: center;
     margin-top: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 #box1 > div > h3{
     width: 80%;
@@ -65,7 +100,8 @@ img+div {
     margin-top: 15px;
     margin-bottom: 25px;
     color: #8A8EB3;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
 }
 #box1 > div input{
     width: 87%;
@@ -83,11 +119,11 @@ img+div {
     height: 53px;
     width: 43%;
     margin-left: 20px;
-    border: 2px solid red;
+    border: 2px solid  #ff4333;
     border-radius: 5px;
 }
 #btn1 > a{
-    color: red;
+    color:  #ff4333;
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
@@ -99,14 +135,15 @@ img+div {
     margin-left: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(93, 7, 172);
+    background-color: #5217b0;
 }
 #btn2 > a{
     color: white;
     font-size: larger;
     font-weight: bold;
     text-decoration: none;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 
 #box2{
@@ -135,13 +172,15 @@ img+div {
 #text > h1{
     color: white;
     font-size: 38px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 #text > h2{
     color: yellow;
     font-size: 38px;
     margin-left: -280px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
 #box2 > div h3{
     color: yellow;

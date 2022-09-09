@@ -9,37 +9,32 @@
   </head>
 
   <body>
+    <!-- navbar -->
     <div id="navbar">
-      <div>
-        <img
-          src="https://wassets.hscicdn.com/static/images/logo.png"
-          alt="espnLogo"
-        />
+      <div><a href="index.html">
+          <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
       </div>
       <div id="subMenu">
-        <div>Live Scores</div>
-        <div>Series</div>
-        <div>Teams</div>
-        <div>News</div>
-        <div>Features</div>
-        <div>Videos</div>
-        <div>Stats</div>
+          <div><a href="LiveScore.html">Live Scores</a></div>
+          <div>Series</div>
+          <div><a href="Teams.html">Teams</a></div>
+          <div>News</div>
+          <div>Features</div>
+          <div>Videos</div>
+          <div>Stats</div>
       </div>
       <div id="notificationBar">
-        <div id="fantacy">
-          <img
-            src="https://wassets.hscicdn.com/static/images/fantasy-home.png"
-            alt="fantacyLogo"
-          />
-          <div>Fantacy</div>
-        </div>
-        <div>Edition IN</div>
-        <div><i class="fa-solid fa-moon"></i></div>
-        <div><i class="fa-solid fa-bell"></i></div>
-        <div><i class="fa-solid fa-language"></i></div>
-        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div id="fantacy">
+              <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+              <div><a href="Login.html">Fantacy</a></div>
+          </div>
+          <div>Edition IN</div>
+          <div><i class="fa-solid fa-moon"></i></div>
+          <div><i class="fa-solid fa-bell"></i></div>
+          <div><i class="fa-solid fa-language"></i></div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
       </div>
-    </div>
+  </div>
 
     <div id="main">
       <div id="box1">
@@ -72,7 +67,7 @@
         </div> -->
         <div>
           <button type="button">
-            <a href="Login.html" id="pageload"><p>Sign Up</p></a>
+             <p id="pageload">Sign Up</p></a>
           </button>
         </div>
         <div>
@@ -120,7 +115,7 @@
   var arr = JSON.parse(localStorage.getItem("key")) || [];
   document.getElementById("pageload").addEventListener("click", signup);
   function signup() {
-    window.location.href = "./Login.html";
+    // window.location.href = "./LoginwithNumber.html";
     event.preventDefault();
     var email = document.getElementById("email").value;
     var pass = document.getElementById("password").value;
@@ -133,17 +128,20 @@
     if (email === "") {
       document.getElementById("emailreq").innerText = "This field is require";
     }
-    if (password === "") {
+    if (pass === "") {
       document.getElementById("passreq").innerText = "This field is require";
     }
-    if (password.lenght < 8) {
+    if (pass.lenght < 8) {
       document.getElementById("passreq").innerText =
         "Password should have minimum 8 characters";
+    }
+    if(email !== "" && pass !== ""){
+      window.location.href = "./LoginwithNumber.html";
     }
 
     var json = JSON.stringify(arr);
     localStorage.setItem("key", json);
-    console.log(arr);
+    // console.log(arr);
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
   }

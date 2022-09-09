@@ -1,50 +1,86 @@
 #navbar {
     display: flex;
     min-height: 48px;
-    background-color: #03A9F4;
+    background-color: #03a9f4;
     padding: 0 12px;
     align-items: center;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    position: sticky;
+    top: 0;
 }
+
+#navbar #subMenu>div:hover,#notificationBar>div:hover{
+    color: #dfe4e6;
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
 #navbar>div:first-child {
     width: 20%;
 }
-#navbar>div>img {
+
+#navbar>div>a img {
     width: 138px;
 }
+
 #subMenu {
     display: flex;
     width: 40%;
+    /* justify-content: space-around; */
     gap: 20px;
+
 }
+
 img+div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #notificationBar {
     margin-left: 40px;
     display: flex;
+    /* justify-content: space-between; */
     justify-content: flex-end;
     gap: 28px;
     align-items: center;
     width: 40%;
 }
+
+#subMenu a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#notificationBar i{
+    font-size: 18px;
+}
+
 #fantacy {
     display: flex;
+    
 }
+
 #fantacy>img {
     width: 24px;
     margin-right: 8px;
 }
+#fantacy>div a:first-child {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
 /*Navbar end*/
 
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main{
     display: flex;
@@ -104,23 +140,25 @@ img+div {
     font-weight: bold;
 }
 .signup{
-    margin-top: 50px;
+    margin-top: 45px;
 }
 .signup > h3{
-    color: gray;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #8A8EB3;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: capitalize;
+    font-family: 'Sarabun', sans-serif;
 }
 .signup > h3  a {
     color: red;
-    font-family:Arial, Helvetica, sans-serif;
 }
 .text > div{
     width: 65%;
     margin-top: 25px;
     margin-left: 100px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 15px;
 }
-
 
 #box2{
     width: 60%;
@@ -146,28 +184,33 @@ img+div {
     margin-top: 20px;
 }
 #text > h1{
-    color: white;
-    font-size: 38px;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
     font-family:Arial, Helvetica, sans-serif;
 }
 #text > h2{
     color: yellow;
-    font-size: 38px;
-    margin-left: -280px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: -265px;
     font-family:Arial, Helvetica, sans-serif;
 }
 #box2 > div h3{
     color: yellow;
     text-align: center;
-    font-size: 38px;
+    font-size: 40px;
+    font-weight: 700;
     margin-top: 3px;
     font-family:Arial, Helvetica, sans-serif;
 }
 #box2 > div  h4{
-    margin-top: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 15px;
     text-align: center;
-    color: white;
-    font-size: 20px;
     font-family:Arial, Helvetica, sans-serif;
 }
 #icons{
