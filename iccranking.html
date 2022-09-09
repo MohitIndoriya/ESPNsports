@@ -39,7 +39,7 @@
             width: 20%;
         }
 
-        #navbar>div>img {
+        #navbar>div>a img {
             width: 138px;
         }
 
@@ -77,11 +77,17 @@
 
         #fantacy {
             display: flex;
+            
         }
 
         #fantacy>img {
             width: 24px;
             margin-right: 8px;
+        }
+        #fantacy>div a:first-child {
+            color: #ffffff;
+            text-decoration: none;
+
         }
 
         #mainPage{
@@ -241,13 +247,13 @@
 <body>
     <!-- navbar -->
     <div id="navbar">
-        <div>
-            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo">
+        <div><a href="index.html">
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
         </div>
         <div id="subMenu">
-            <div><a href="scoreboard.html">Live Scores</a></div>
+            <div><a href="LiveScore.html">Live Scores</a></div>
             <div>Series</div>
-            <div>Teams</div>
+            <div><a href="Teams.html">Teams</a></div>
             <div>News</div>
             <div>Features</div>
             <div>Videos</div>
@@ -256,10 +262,10 @@
         <div id="notificationBar">
             <div id="fantacy">
                 <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
-                <div>Fantacy</div>
+                <div><a href="Login.html">Fantacy</a></div>
             </div>
             <div>Edition IN</div>
-            <div><button onclick="myFunction()"><i class="fa-solid fa-moon"></i></button></div>
+            <div><i class="fa-solid fa-moon"></i></div>
             <div><i class="fa-solid fa-bell"></i></div>
             <div><i class="fa-solid fa-language"></i></div>
             <div><i class="fa-solid fa-magnifying-glass"></i></div>
