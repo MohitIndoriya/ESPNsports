@@ -200,9 +200,8 @@
     }
 
     .searchtrying {
-        border: 1px solid lightgray;
+        border: 1px solid #fffff;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
     }
 
     .searchtrying>div {
@@ -221,7 +220,15 @@
     #logo{
         margin-top: -4px;
     }
+    
+    .search_border{
+        justify-content: center;
+    }
 
+    .secondrowflex h3{
+        padding-left: 10px;
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -260,7 +267,7 @@
                 <option>TEST</option>
 
             </select>
-            <span class="material-symbols-outlined" onclick="fun()">
+            <span id="search" class="material-symbols-outlined" onclick="fun()">
                 search
             </span>
             <input type="text" placeholder="Search for Test/ODI/T20 stats" id="question" />
