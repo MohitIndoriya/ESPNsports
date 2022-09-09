@@ -53,7 +53,7 @@
             border-color: rgba(var(--color-line-default), var(--tw-border-opacity));
             border-bottom-width: 1px;
             position: sticky;
-            top: 0px;
+            top: 48px;
             /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
             z-index: 2000;
             background-color: white;
@@ -174,6 +174,7 @@ padding: 8px;
             display: grid;
             justify-content: center;
             gap: 20px;
+            margin-top: 20px;
         }
         #add2{
             width: 100%;
@@ -202,12 +203,113 @@ padding: 8px;
         .venue{
             font-size: 10px;
         }
+        /* navbar css */
+        #navbar {
+            display: flex;
+            min-height: 48px;
+            background-color: #03a9f4;
+            padding: 0 12px;
+            align-items: center;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            
+        }
+
+        #navbar #subMenu>div:hover,#notificationBar>div:hover{
+            color: #dfe4e6;
+            cursor: pointer;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        #navbar>div:first-child {
+            width: 20%;
+        }
+
+        #navbar>div>a img {
+            width: 138px;
+        }
+
+        #subMenu {
+            display: flex;
+            width: 40%;
+            /* justify-content: space-around; */
+            gap: 20px;
+
+        }
+
+        img+div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #notificationBar {
+            margin-left: 40px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            gap: 28px;
+            align-items: center;
+            width: 40%;
+        }
+
+        #subMenu a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #notificationBar i{
+            font-size: 18px;
+        }
+
+        #fantacy {
+            display: flex;
+            
+        }
+
+        #fantacy>img {
+            width: 24px;
+            margin-right: 8px;
+        }
+        #fantacy>div a:first-child {
+            color: #ffffff;
+            text-decoration: none;
+
+        }
 
        
     </style>
 </head>
 
 <body>
+    <div id="navbar">
+        <div><a href="index.html">
+            <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+        </div>
+        <div id="subMenu">
+            <div><a href="LiveScore.html">Live Scores</a></div>
+            <div>Series</div>
+            <div><a href="Teams.html">Teams</a></div>
+            <div>News</div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div><a href="Login.html">Fantacy</a></div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </div>
     <div id="images"><img src="https://tpc.googlesyndication.com/simgad/4142572825207069660?" alt="">
         <div id="add2"> <img src="https://tpc.googlesyndication.com/simgad/12315893093182788699?" alt=""></div>
    </div>
@@ -271,7 +373,7 @@ padding: 8px;
                         <img style="height: 20px;"
                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAB7CAMAAABXYM5RAAAAYFBMVEX///8AAAD39/dXV1cTExOfn5/AwMDs7OwiIiK9vb3T09OKiop7e3tLS0umpqY1NTVQUFDg4OA9PT2Xl5doaGjGxsatra1xcXFiYmKDg4PNzc0ICAgYGBja2tocHBwtLS19F+zEAAACwElEQVRoge2a65KjIBCFBWOIGuNdYxLH93/L1UZjo7kUvVibnXD+THEm9ic2ICCOs1SasIJjgxfMTZWfHFnWKkbODuUq0HPxG2MswU7SGx2m1r3BhILopd7GS12G3zNkCLaMAMYeGdlgeLoMdNtPGPjZfDcDGeYYfFIJEcS9zFMw2tngYPhzWTLyufwQUJ1vzJyypl0hLgeDAKlmURnfOKGXq0DSLRCM1ZgBCWNdMkoWk1kRGNFsuGBkyNgNRqxegAeCAIycq2XcIMDAwxMYl+VtnuaQUHbn/8N41qAGABH+rg+mOzVGsYhgpJ8foSKNP9Z+eLo7FNIIwxsT/xPyzRl90+APGO0y52vGdcmI1JxjBosfMMAIUdlpeqPAxmm6v0nlouqYMbSnFYPndeUoqmpPHRr8OhSKUdaNYgCj8uPxua8YJuTJTsghUdWmDPkQj9sy+A46vGVYhmVYxv/LqEhz31qHcaEQmDJ/esvIiYyDBoM6xT7r5KOgVUPoMJw2IEgJ8RFt1zIswzJ+PyM4RwSddBjUvY3VevAFw3sd6qk6DUZFZEQaDB7TGIFOzh3/pK9qva79123XMizDMn4/Q+ShvppAhyF+aOPuXoNxoiFY9mEMQfyk4+vkPA2PBCnfUj+i7VqGZVjGFzBKnyC9fZ+INu6mGgzqGsfVYFDXajr7iS2Rkevko4xigjDiQ9quZViGZVjG9zDgm1Z5Z8ChyeD9ZVo6D0HbOwOWZsn7y3S0H2JexZ0hj9pEF2FMqXxbDx8lR8b0Ge12MKXx3dsiBvw1L3j3Tgzyov89YmY4/Gia0I2bDjOjr4oHWTmcXQMqmv3U3zBjPL1nuAmPc7X72S15jGn/6gKC6jk1g0J4kNWLC7QlZJ7nybbsi+y6MycZESeAut/zTspmf7gJYjHcbnDINlbP5g2qis4gIGvkwdU/A6hDurOOqyIAAAAASUVORK5CYII="
                                 alt="icon">
-                        <div>
+                        <div style="display: block;">
                             <p >Desktop Scoreboard
                             </p>
                             <p> A mini scoreboard that stays with you and updates all the current matches</p>
@@ -312,6 +414,19 @@ padding: 8px;
 </html>
 <script>
     let obj = [
+    {
+    "type": "20",
+    "date": "LIVE",
+    "venue": "12th Match, Super Four (N), Dubai (DSC), September 09, 2022,  Asia Cup",
+    "TeamA": "Pakistan",
+    "TeamB": "Sri Lanka",
+    "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313100/313129.logo.png",
+    "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/340000/340047.png",
+    "Result": "Sri Lanka chose to field.",
+    "score1": "(12.2/20 ov) 79/3",
+    "score2": "",
+    "International": "International"
+},
         {
             "type": "20",
             "date": "TODAY, 7:30 PM",
@@ -554,3 +669,56 @@ padding: 8px;
         "International": "Domestic"
     }
 ] -->
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+     function asia(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility= "hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility= "hidden"
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function match(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function cpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="hidden" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+
+    }
+    function wcpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+    }
+</script>
+<!-- {
+    "type": "20",
+    "date": "LIVE",
+    "venue": "12th Match, Super Four (N), Dubai (DSC), September 09, 2022,  Asia Cup",
+    "TeamA": "Pakistan",
+    "TeamB": "Sri Lanka",
+    "imageA": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/313100/313129.logo.png",
+    "imageB": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_80/lsci/db/PICTURES/CMS/340000/340047.png",
+    "Result": "Sri Lanka chose to field.",
+    "score1": "(12.2/20 ov) 79/3",
+    "score2": "",
+    "International": "International"
+} -->
