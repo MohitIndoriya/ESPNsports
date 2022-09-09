@@ -173,6 +173,7 @@
 
         #fantacy {
             display: flex;
+            
         }
 
         #fantacy>img {
@@ -187,16 +188,18 @@
     <!-- topnavbar -->
     <div id="mainNavbar">
         <div id="topNav">
-            <div>Matches(9)</div>
-            <div>Asia Cup(2)</div>
+            <div onclick="match()">Matches(9)</div>
+            <div onclick="asia()">Asia Cup(2)</div>
+            <div onclick="cpl()">CPL(4)</div>
+            <div onclick="wcpl()">WCPL(1)</div>
             <div>NZ-A in IND(1)</div>
-            <div>CPL(4)</div>
-            <div>WCPL(1)</div>
+            
+            
             <div>Men's Hundred(1)</div>
             <div>Women's Hundred(1)</div>
         </div>
         <div id="matchData">
-            <div id="box">
+            <div id="box" class="asia">
                 <p><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</p>
                 <div id="flag">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
@@ -217,7 +220,7 @@
                     <div>Fantacy</div>
                 </div>
             </div>
-            <div id="box">
+            <div id="box" class="asia">
                 <p><strong>Result</strong> - Asia Cup - T20I - Sharjah</p>
                 <div id="score">
                     <div id="flag">
@@ -244,7 +247,7 @@
                     <div>Fantacy</div>
                 </div>
             </div>
-            <div id="box">
+            <div id="box" class="wcpl">
                 <p><strong>TOMORROW, 12:00 AM</strong> - WCPL - Basseterre</p>
                 <div id="flag">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313400/313485.logo.png"
@@ -265,7 +268,7 @@
                     <div>Fantacy</div>
                 </div>
             </div>
-            <div id="box">
+            <div id="box" class="cpl">
                 <p><strong>NO RESULT</strong> - CPL - T20 - Dubai(DSC)</p>
                 <div id="flag">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313500/313501.logo.png"
@@ -320,3 +323,42 @@
 
 </html>
 <script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+     function asia(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility= "hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility= "hidden"
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function match(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="visible"
+    asia[1].style.visibility="visible"
+    }
+    function cpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="visible"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="hidden" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+
+    }
+    function wcpl(){
+        let show=document.getElementsByClassName("cpl")
+    show[0].style.visibility="hidden"
+    let sho=document.getElementsByClassName("wcpl")
+    sho[0].style.visibility="visible" 
+    let asia=document.getElementsByClassName("asia")
+    asia[0].style.visibility="hidden"
+    asia[1].style.visibility="hidden"
+    }
+</script>
