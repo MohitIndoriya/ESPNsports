@@ -7,6 +7,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>border</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body>div:first-child {
+            background-color: #0398dc;
+        }
+
+        #mainNavbar {
+            /* padding: 4px; */
+        }
+
+        #topNav {
+            display: flex;
+            color: #ffffff;
+            gap: 20px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 8px;
+        }
+
+        #topNav>div:hover {
+            color: #d3d7d9;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        #matchData {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 8px;
+            /* margin-left: 4px; */
+        }
+
+        #matchData>div {
+            border: 1px solid lightgray;
+            border-radius: 16px;
+            background-color: #ffffff;
+            /* gap: 10px; */
+            padding: 10px;
+            width: 95%;
+            margin-bottom: 12px;
+        }
+
+        #matchData>div:hover {
+            transform: scale(1.07);
+            transition: 0.6s ease transform;
+            cursor: pointer;
+        }
+
+        #boxsh>p:first-child {
+            font-size: 12px;
+            /* font-weight: 600; */
+            color: rgb(87, 85, 85);
+            margin-bottom: 12px;
+        }
+
+        #boxsh>p a:first-child {
+            color: rgb(87, 85, 85);
+            text-decoration: none;
+
+        }
+
+        #flagsh+p {
+            font-size: 10px;
+            margin: 8px 0;
+            color: rgb(58, 57, 57);
+        }
+
+        #flagsh {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #flagsh>img {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        #flagsh>div {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgb(49, 48, 48);
+        }
+
+        #matchTime {
+            display: flex;
+            gap: 30px;
+            margin-top: 8px;
+        }
+
+        #matchTime>div {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgb(49, 48, 48)
+        }
+
+        #scoresh {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #scoresh>div:last-child {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #scoresh~p {
+            font-size: 10px;
+            margin: 8px 0;
+            color: rgb(58, 57, 57);
+        }
+
+
+
+        #navbar {
+            display: flex;
+            min-height: 48px;
+            background-color: #03a9f4;
+            padding: 0 12px;
+            align-items: center;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+        }
+
+        #navbar #subMenu>div:hover,
+        #notificationBar>div:hover {
+            color: #dfe4e6;
+            cursor: pointer;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        #navbar>div:first-child {
+            width: 20%;
+        }
+
+        #navbar>div>a img {
+            width: 138px;
+        }
+
+        #subMenu {
+            display: flex;
+            width: 40%;
+            /* justify-content: space-around; */
+            gap: 20px;
+
+        }
+
+        img+div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #notificationBar {
+            margin-left: 40px;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            gap: 28px;
+            align-items: center;
+            width: 40%;
+        }
+
+        #subMenu a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        #notificationBar i {
+            font-size: 18px;
+        }
+
+        #fantacy {
+            display: flex;
+
+        }
+
+        #fantacy>img {
+            width: 24px;
+            margin-right: 8px;
+        }
+
+        #fantacy>div a:first-child {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
         main>div>div {
             border: 2px solid#ffffff;
             border-radius: 12px;
@@ -186,7 +383,7 @@
             border: 1PX solid #88CCDD;
         }
 
-        strong {
+        .borderbox strong {
             font-family: BentonSans-Bold, Arial, Noto Sans, sans-serif;
             font-weight: 700;
             color: #0eadf4;
@@ -230,10 +427,11 @@
             font-size: small;
         }
 
-        body {
+        .borderbox {
             background-color: rgb(249 249 251);
             padding-left: 40px;
             padding-right: 40px;
+            padding-top: 30px
         }
 
 
@@ -292,9 +490,9 @@
             margin-right: 10px;
         }
 
-        #score {
+        /* #score {
             margin-top: -8px;
-        }
+        } */
 
         h2+p {
             margin-top: -10px;
@@ -307,7 +505,7 @@
 
         #score {
             justify-content: space-between;
-            margin-top: -24px;
+            /* margin-top: -24px; */
         }
 
         .scoresgrid {
@@ -344,13 +542,12 @@
 
         body {
             font-family: BentonSans, Arial, Noto Sans, sans-serif;
-        
+
         }
 
         img:hover {
-        
             box-sizing: border-box;
-            transform: scaleY(1.03);
+            transform: scale(1.02);
             transition: 0.3s;
         }
 
@@ -358,36 +555,36 @@
             .box {
                 display: none;
             }
-            
-            
+
+            #navbar,
+            #mainNavbar {
+                display: none;
+
+            }
 
             .thirdcolumn {
                 display: none;
             }
 
-            .secondcolumn{
+            .secondcolumn {
                 font-size: 30px;
-                gap:0px;
+                gap: 0px;
             }
-            .secondcolumn>div{
+
+            .secondcolumn>div {
                 /* width:100%; */
                 padding-left: 0px;
                 padding-right: 0px;
                 margin: 0px;
-                font-size:20px;
-                
+                font-size: 20px;
+
             }
 
-            .secondcolumn hr{
+            .secondcolumn hr {
                 display: none;
             }
 
-            body{
-                margin: 0px;
-                padding: 0px;
-                gap: 0px;
-                color: white;
-            }
+
 
             .threerowflex {
                 /* width: 100%; */
@@ -398,7 +595,7 @@
 
             img {
                 display: block;
-               
+
             }
 
             .flex {
@@ -409,10 +606,10 @@
                 box-sizing: border-box;
                 display: block;
                 font-size: inherit;
-                
+
             }
 
-            .flex p{
+            .flex p {
                 font-size: 20px;
                 padding-bottom: 0px;
                 margin-bottom: 0px;
@@ -426,89 +623,327 @@
                 padding-left: 0px;
             }
 
-             br{
-                display: none;
-            }
-            main{
-                gap:0px;
-            }
-
-            #notdisplay{
+            br {
                 display: none;
             }
 
+            main {
+                gap: 0px;
+            }
+
+            #notdisplay {
+                display: none;
+            }
+
+            .firstrow {
+                display: none;
+            }
+
+
+
+            .borderbox {
+                margin: 0px;
+                padding: 0px;
+                gap: 0px;
+                color: white;
+            }
+
+            .flex img {
+                margin-bottom: 12px;
+            }
+
+            .borderbox p {
+                margin-bottom: 10px;
+            }
+
+            .secondcolumn>div {
+                font-size: calc(1.1);
+            }
+
+            .secondcolumn {
+                display: grid;
+                grid-template-columns: repeat(1fr);
+                gap: 10px
+            }
         }
 
-        .flex h3, .secondcolumn h1{
-            font-size: 23px;
+        .flex h3,
+        .secondcolumn h1 {
+            font-size: 24px;
         }
 
-        .scoresgrid, .secondcolumn h4{
-            font-size:14px;
+
+        .scoresgrid,
+        .secondcolumn h4 {
+            font-size: 14px;
             font-weight: lighter;
             color: rgb(87, 87, 90);
         }
 
-        .box{
+        .box {
             color: rgb(138, 138, 143);
         }
-        .thirdcolumn p ,a, .keyspadding>p strong{
+
+        .thirdcolumn p,
+        a,
+        .keyspadding>p strong {
             color: rgb(126, 125, 125);
         }
 
-      .scoresgrid, .threerowflex,.flex p, #keyspadding>p strong{
+        .scoresgrid,
+        .threerowflex,
+        .flex p,
+        #keyspadding>p strong {
             color: rgb(69 70 71);
         }
 
-     .flex h3,.backgroundwhite h1{
+        .flex h3,
+        .backgroundwhite h1 {
             color: #2b2c2d;
         }
 
-       .flex, .threerowflex{
+        .flex,
+        .threerowflex {
             margin-top: 20px;
         }
 
-        .backgroundblack h4{
+        .backgroundblack h4 {
             color: white;
         }
 
-        .flex{
-            /* border: 2px solid red; */
+        .flex {
+
             margin-bottom: 10px;
             margin-top: 10px;
         }
-        
+
         .first_column {
             padding: 10px;
         }
-/*         
-        body{
-            font-family: 'Work Sans', sans-serif;
-        } */
 
-        .secondcolumn .flex h3{
-            font-family:inherit;
-            font-size:inherit;
+        .secondcolumn .flex h3 {
+            font-family: inherit;
+            font-size: inherit;
         }
 
-       #indiascore{
-        color: black;
-       }
-      .secondcolumn .flex{
-        font-family: inherit;
-      }
+        #indiascore {
+            color: black;
+        }
 
+        .secondcolumn .flex {
+            font-family: inherit;
+        }
+
+        .flex div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* background-color: red; */
+        }
+
+        .flex h3 {
+            margin-top: -10px;
+            text-align: left;
+            margin-left: 0px;
+            padding: 0px;
+        }
+
+        .secondcolumn>div>p {
+            margin-bottom: 10px;
+        }
+
+        #keyspadding p:first-child {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .thirdcolumn #keyspadding p:first-child {
+            padding-bottom: 0px;
+        }
+
+        #keyspadding>div>p {
+            padding-top: 2.2px;
+        }
+
+        #keyspadding a {
+            margin-top: -7px;
+        }
+
+        .firstrow {
+            display: block;
+
+        }
+
+        #score {
+            padding-top: 10px;
+        }
+
+        .thirdcolumn hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     </style>
-</head>
 
-<body>
+    <!-- topnavbar -->
+    <div id="mainNavbar">
+        <div id="topNav">
+            <div onclick="match()">Matches(9)</div>
+            <div onclick="asia()">Asia Cup(2)</div>
+            <div onclick="cpl()">CPL(4)</div>
+            <div onclick="wcpl()">WCPL(1)</div>
+            <div>NZ-A in IND(1)</div>
 
+
+            <div>Men's Hundred(1)</div>
+            <div>Women's Hundred(1)</div>
+        </div>
+        <div id="matchData">
+            <div id="boxsh" class="asia">
+                <p><a href="scoreboard.html"><strong>TODAY, 7:30 PM</strong> - Asia Cup - T20I - Dubai(DSC)</a></p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313128.logo.png"
+                        alt="indiaFlag">
+                    <div>
+                        <h4>INDIA</h4>
+                    </div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313100/313129.logo.png"
+                        alt="pakFlag">
+                    <div>
+                        <h4>PAKISTAN</h4>
+                    </div>
+                </div>
+
+                <p>Match starts in <strong>4</strong> hrs <strong>39</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="asia">
+                <p><strong>Result</strong> - Asia Cup - T20I - Sharjah</p>
+                <div id="scoresh">
+                    <div id="flagsh">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/321000/321005.png"
+                            alt="afgFlag">
+                        <div>
+                            <h4>AFG</h4>
+                        </div>
+                    </div>
+                    <div>176/6</div>
+                </div>
+                <div id="scoresh">
+                    <div id="flagsh">
+                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/340000/340047.png"
+                            alt="slFlag">
+                        <div>
+                            <h4>SL</h4>
+                        </div>
+                    </div>
+                    <div>179/4</div>
+                </div>
+
+                <p>Srilanka won by <strong>6</strong> wickets</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="wcpl">
+                <p><strong>TOMORROW, 12:00 AM</strong> - WCPL - Basseterre</p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313400/313485.logo.png"
+                        alt="tkrwFlag">
+                    <div>
+                        <h4>TRINBAGO KNIGHT RIDERS WOMENS</h4>
+                    </div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/325900/325974.png"
+                        alt="brwFlag">
+                    <div>
+                        <h4>BARBADOS ROYALS WOMEN</h4>
+                    </div>
+                </div>
+
+                <p>Match starts in <strong>9</strong> hrs <strong>19</strong> mins</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+            <div id="boxsh" class="cpl">
+                <p><strong>NO RESULT</strong> - CPL - T20 - Dubai(DSC)</p>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313500/313501.logo.png"
+                        alt="stknpFlag">
+                    <div>
+                        <h4>STKNP</h4>
+                    </div>
+                </div>
+                <div id="flagsh">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_160,q_50/lsci/db/PICTURES/CMS/313400/313485.logo.png"
+                        alt="tkrFlag">
+                    <div>
+                        <h4>TKR</h4>
+                    </div>
+                </div>
+
+                <p>No result(abandoned with a toss)</p>
+                <hr>
+                <div id="matchTime">
+                    <div>Schedule</div>
+                    <div>Table</div>
+                    <div>Fantacy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- navbar -->
+    <div id="navbar">
+        <div><a href="index.html">
+                <img src="https://wassets.hscicdn.com/static/images/logo.png" alt="espnLogo"></a>
+        </div>
+        <div id="subMenu">
+            <div><a href="LiveScore.html">Live Scores</a></div>
+            <div>Series</div>
+            <div><a href="Teams.html">Teams</a></div>
+            <div><a href="newspage.html">News</a></div>
+            <div>Features</div>
+            <div>Videos</div>
+            <div>Stats</div>
+        </div>
+        <div id="notificationBar">
+            <div id="fantacy">
+                <img src="https://wassets.hscicdn.com/static/images/fantasy-home.png" alt="fantacyLogo">
+                <div><a href="Login.html">Fantacy</a></div>
+            </div>
+            <div>Edition IN</div>
+            <div><i class="fa-solid fa-moon"></i></div>
+            <div><i class="fa-solid fa-bell"></i></div>
+            <div><i class="fa-solid fa-language"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </div>
+    </div>
+    <!-- navbar page over-->
     <main class="borderbox">
         <div class="box">
             <!-- ask a question -->
             <div class="first_column" id="box-border">
                 <img id="ask_image" src="https://wassets.hscicdn.com/static/images/nlp-logo.svg" alt="ask question" />
+
                 <p>What is Joe Root's batting average against Kagiso Rabada in Tests?</p>
+                <br />
 
                 <a href="question_page.html">
                     <div class="buttonwithsearch">
@@ -521,7 +956,7 @@
             </div>
             <!-- key series -->
             <div id="keyspadding">
-                <P><strong>Key Series</strong> </P>
+                <p><strong>Key Series</strong></p>
                 <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
@@ -594,9 +1029,9 @@
                 </div>
             </div>
             <!-- social media link -->
-            <div id="keyspadding">
+            <div id="keyspadding" class="social">
                 <p><strong>Follow ESPNcricinfo</strong></p>
-                <hr/>
+                <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
                     <a href="https://www.instagram.com/espncricinfo/">
@@ -625,7 +1060,7 @@
             <!-- espn sites -->
             <div id="keyspadding">
                 <p><strong>
-                    ESPN Sites</p></strong>
+                        ESPN Sites</p></strong>
                 <hr />
                 <div class="keys">
                     <span class="material-symbols-outlined">chevron_right</span>
@@ -656,18 +1091,18 @@
             <div>
                 <div class="backgroundwhite">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/esci/media/motion/2022/0903/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global/dm_220903_INET_CRIC_asiacup-ind-pak2-preview_qatarairways_global.jpg"
-                        alt="image2"/>
+                        alt="image2" />
                     <h1>Should Rishabh Pant replace KL Rahul as opener for India?</h1>
                     <h4>What should be Pakistan's bowling combination? Mickey Arthur and Wasim Jaffer have their say
                         before the match
                     </h4>
                 </div>
-                <br/>
-                <hr/>
+                <br />
+                <hr />
                 <!-- 2nd cloumns 2nd row -->
                 <div class="flex">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/343700/343724.6.jpg"
-                        alt="image3"/>
+                        alt="image3" />
                     <div>
                         <h3>Wit and wisdom at Rahul Dravid's Saturday laughter club - snapshots from a press conference
                         </h3>
@@ -708,14 +1143,14 @@
                         only
                         88 in their last 10 overs</h4>
                 </div>
-                <br/>
-                <hr/>
+                <br />
+                <hr />
                 <!-- 2nd cloumns 2nd row -->
                 <div class="flex">
                     <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345400/345403.6.jpg"
                         alt="pakistan player image" />
                     <div>
-                        <h3>Rizwan, Nawaz star as Pakistan clinch a classic</h3>
+                        <h3>Rizwan, Nawaz star as Pakistan clinch a classic game in nail bitting game</h3>
                         <p>India began with a bang, with Kohli looking close to his best, but kept losing wickets,
                             scoring
                             only 88 in their last 10 overs</p>
@@ -744,28 +1179,21 @@
                 </div>
             </div>
             <div class="backgroundwhite" id="notdisplay">
-                <h3>INDIA A VS NEW ZEALAND A</h3>
+
                 <div id="score">
-                    <p>FOUR-DAY GAME, BENGALURU</p>
+                    <h3>INDIA A VS NEW ZEALAND A</h3>
                     <p><strong><span id="indiascore">IND-235/4</strong></p>
                 </div>
+                <br />
                 <hr />
                 <img class="prasidhimage"
                     src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/318200/318254.6.jpg"
                     alt="Prasidh Krishna">
                 <h2>Thakur replaces injured Prasidh Krishna in India A squad</h2>
+                <br />
                 <p>Back injury sidelines Karnataka quick from rest of the red-ball series against NZ A</p>
-                <br/>
+                <br />
                 <hr />
-                <!-- <div class="flex">
-                    <img #id="rajat" src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345300/345355.6.jpg"
-                        alt="rajat" />
-                    <div>
-                        <h3>Rajat Patidar 176, Joe Carter 197 the highlights of drawn game</h3>
-                        <p>Other performers included Easwaran with 132, Varma with 121 and Mukesh Kumar with 5 for 86
-                        </p>
-                    </div>
-                    <br/> -->
                 <div class="scoresgrid">
                     <div class="keys">
                         <span class="material-symbols-outlined">chevron_right</span>
@@ -868,10 +1296,53 @@
     </main>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@0,500;0,700;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@0,500;0,700;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</body>
+    </body>
 
 </html>
+
+<script src="https://kit.fontawesome.com/c3ff0c4a78.js" crossorigin="anonymous"></script>
+<script>
+    function asia() {
+        let show = document.getElementsByClassName("cpl")
+        show[0].style.visibility = "hidden"
+        let sho = document.getElementsByClassName("wcpl")
+        sho[0].style.visibility = "hidden"
+        let asia = document.getElementsByClassName("asia")
+        asia[0].style.visibility = "visible"
+        asia[1].style.visibility = "visible"
+    }
+    function match() {
+        let show = document.getElementsByClassName("cpl")
+        show[0].style.visibility = "visible"
+        let sho = document.getElementsByClassName("wcpl")
+        sho[0].style.visibility = "visible"
+        let asia = document.getElementsByClassName("asia")
+        asia[0].style.visibility = "visible"
+        asia[1].style.visibility = "visible"
+    }
+    function cpl() {
+        let show = document.getElementsByClassName("cpl")
+        show[0].style.visibility = "visible"
+        let sho = document.getElementsByClassName("wcpl")
+        sho[0].style.visibility = "hidden"
+        let asia = document.getElementsByClassName("asia")
+        asia[0].style.visibility = "hidden"
+        asia[1].style.visibility = "hidden"
+
+    }
+    function wcpl() {
+        let show = document.getElementsByClassName("cpl")
+        show[0].style.visibility = "hidden"
+        let sho = document.getElementsByClassName("wcpl")
+        sho[0].style.visibility = "visible"
+        let asia = document.getElementsByClassName("asia")
+        asia[0].style.visibility = "hidden"
+        asia[1].style.visibility = "hidden"
+    }
+</script>
