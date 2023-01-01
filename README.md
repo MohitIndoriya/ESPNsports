@@ -7,19 +7,19 @@ I am student in Masai school from part time batch.In unit-4 we are going through
 
 ESPNcricinfo is a website which gives the details of cricket sport like cricket matches throughout the world, cricket news can be seen ,can watch the live score and many more.
 
-#Tech use to clone
+# Tech use to clone
 we have use HTML,CSS,Javascript
 
-#Home Page
+# Home Page
 Home page consist of two thing one is navbar and other is bottom of navbar
 
-#Navbar
+# Navbar
 We can apply filter as shown in the navbar
 Some important link are provided like when we click on news page it will take us to the news page
 Same when we click on Live Scores it will show the Live Score page
 When we click on fantasy it will take us to the sign in & login page
 <br/>
-<imh src="https://miro.medium.com/max/720/0*ln0mPxlwnEicwA2W"/>
+<img src="https://miro.medium.com/max/720/0*ln0mPxlwnEicwA2W" />
 <br/>
 Navbar have several links likes
 
@@ -33,44 +33,58 @@ Navbar have several links likes
 
 5)Fantasy (Login & Sign up)
 
-Bottom of Navbar
+# Bottom of Navbar
 In this bottom navbar we can see a navbar which gives the live scores, series and many more.
 In first column all the important link are provided.
 In second column all the current crickets news can be seen.
 In third column all the thing that happen in cricket on current date.
-
-Question page
+<br/>
+<img src="https://miro.medium.com/max/720/0*xtspS9BSbsY__yJA.webp" />
+<br/>
+# Question page
 We can select type question from ODI/T20/TEST.
 One input tag is there when we enter the question it will show the answer for it.
 At last point some question are already provided.
-
-Live Scores
+<br/>
+<img src="https://miro.medium.com/max/720/0*XMwRNOKY8TMV6ULm.webp" />
+<br/>
+# Live Scores
 On this page everyone can see live matches that are going live at that time.
 We have added some functionality to this page .if i click on international button you can see only international matches.
 Similarly if anyone want to see only t20 ,ODI,TEST,Domestic all the buttons you will see only those matches who related to particular button.
-
-All Teams page
+<br/>
+<img src="https://miro.medium.com/max/720/0*f7vqCAVEgD2A2Yot.webp" />
+<br/>
+# All Teams page
 On this page everyone can see the all popular teams of cricket
 We can see popular international men teams
 We can see popular international women teams
 We can see IPL 2022 teams.
-
-ICC Ranking Page
+<br/>
+<img src="https://miro.medium.com/max/720/0*uPpfmDmN_syY9__K.webp" />
+<br/>
+# ICC Ranking Page
 In this page We can see all the top 10 Ranking teams according rating points.
 All TEST and ODI Ranking can be seen.
 On right side,we see the latest news related to the cricket throughout the world.
 At bottom-right we can ask some Question related to cricket,Cricket expert will answer.
-
-Login & Sign up page
+<br/>
+<img src="https://miro.medium.com/max/720/0*XCnlTL218bS_A6DC.webp" />
+<br/>
+# Login & Sign up page
 In this page first we have to create an account by clicking on sign up.
 After creating an account we are able to login,we have to use same credential which we used at the time of sign up.
 Now we can play fantasy game here.
-
-News Page
+<br/>
+<img src="https://miro.medium.com/max/720/0*WcQ3P_3tZ6_mnvO0.webp" />
+<br/>
+# News Page
 Whenever anyone will click on any image or text it will redirect you to the detail news about that image or text.
 On left side you will find the older news also.
-
-Roles and Responsibility
+<br/>
+<img src="https://miro.medium.com/max/720/0*eshESjik71IQuiMY.webp" />
+<br/>
+# Roles and Responsibility
 As we are four member of team we have give every individual to work on different pages according to there choice.
 As Mohit is strong in functionality, Yogeshwari is strong in local storage,Zain is strong in CSS and I my self strong in HTML so we have divided our work in such a way that everyone will get there strong part to work on.
 We use to have meet most probably every night to see if any one got stuck on any part,so we can resolve it.
@@ -83,7 +97,7 @@ Collaboration is most important aspect for any project.During the construct week
 
 At last we have clone the ESPNcricinfo.com with it’s main functionality which we have shown through images. The project repository is available on GITHub.
 
-Team Members and Contributors
+# Team Members and Contributors
 Uttam Kumar Mehta
 GitHub : https://github.com/UttamMehta
 Linkedin : https://www.linkedin.com/in/uttam-mehta-47364923b/
