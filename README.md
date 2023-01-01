@@ -1,22 +1,26 @@
 # ESPNsports
 ESPNcricinfo Clone
+<br/>
 <img src="https://miro.medium.com/max/720/0*ZXNZ7UKt5oIDF3JW.webp"/>
-I am student in Masai school from part time batch.In unit-4 we are going through construct week in which i have to work on a group project with my batch mates Zain Sheikh,Yogeshwari Suryawanshi and Mohit Indoriya. we have to clone ESPNcricinfo.com site in a week.
+<br/>
+I am student in Masai school from part time batch.In unit-4 we are going through construct week in which i have to work on a group project with my batch mates Zain Sheikh,Yogeshwari Suryawanshi and Utam Mehta. we have to clone ESPNcricinfo.com site in a week.
 
 ESPNcricinfo is a website which gives the details of cricket sport like cricket matches throughout the world, cricket news can be seen ,can watch the live score and many more.
 
-Tech use to clone
+#Tech use to clone
 we have use HTML,CSS,Javascript
 
-Home Page
+#Home Page
 Home page consist of two thing one is navbar and other is bottom of navbar
 
-Navbar
+#Navbar
 We can apply filter as shown in the navbar
 Some important link are provided like when we click on news page it will take us to the news page
 Same when we click on Live Scores it will show the Live Score page
 When we click on fantasy it will take us to the sign in & login page
-
+<br/>
+<imh src="https://miro.medium.com/max/720/0*ln0mPxlwnEicwA2W"/>
+<br/>
 Navbar have several links likes
 
 1)Question Page
